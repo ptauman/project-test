@@ -3,9 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>army</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container" id = "firstPage">
+        <h1>batalion forces mangment</h1>
+        <div class="container" id = "inputDiv">       
+            <form id ="form">
+                <input class = "input" type="text" id="fullNameInput"  placeholder="full Name" required>
+                <input class = "input" type="text" id="rankInput"  placeholder="rank" required>
+                <input class = "input" type="text" id="positionInput"  placeholder="position" required>
+                <input class = "input" type="text" id="plattonInput"  placeholder="platton" required>
+                <input class = "input" type = "number" id = "timeInput" placeholder = "mission time (seconds)" required>
+                <select class = "input" id = "statusSelector">
+                    <option value="active">active</option>
+                    <option value="Reserve">Reserve</option>
+                    <option value="Retired">Retired</option>
+                </select>
+                <input class = "input" type="submit"  id ="submitButton" value="Add Personal">
+            </form>  
+        </div>
+            <div class="container" id = "tableDiv"> 
+                <h2>forces overview</h2>
+            <table>
+                <tr>
+                    <th>full name</th>
+                    <th>rank</th>
+                    <th>position</th>
+                    <th>platton</th>
+                    <th>status</th>
+                    <th>actions</th>
+             </tr>
+             <tbody id="soldiersTable"></tbody>
+            </table>         
+        </div>
+
+    </div>
+   
+    <div class="popup">  
+        <div class="popup-content" id = "popupInputDiv">       
+            <form id ="form2">
+                <input class = "input" type="text" id="fullNameInputPpopup"  placeholder="full Name" required>
+                <input class = "input" type="text" id="rankInputPpopup"  placeholder="rank" required>
+                <input class = "input" type="text" id="positionInputPpopup"  placeholder="position" required>
+                <input class = "input" type="text" id="plattonInputPpopup"  placeholder="platton" required>
+                <input class = "input" type = "number" id = "timeInputPpopup" placeholder = "mission time (seconds)" required>
+                <input class="hidden" type="hidden" id="idSOlider">
+                <select class = "input" id = "statusSelectorPpopup">
+                    <option value="active">active</option>
+                    <option value="Reserve">Reserve</option>
+                    <option value="Retired">Retired</option>
+                </select>
+                <input class = "input" type="submit"  id ="submitButtoPpopup" value="Add Personal">
+                <input class = "input" type="button"  id ="cencelButtoPpopup" value="cancel">
+            </form>  
+        </div>   
+    </div>
     
+    <script src="script.js"></script>
 </body>
 </html>
